@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>ComputerSelectPanel</class>
  <widget class="QWidget" name="ComputerSelectPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>151</width>
+    <height>177</height>
+   </rect>
+  </property>
   <layout class="QVBoxLayout">
    <item>
     <widget class="QTreeView" name="treeView">
@@ -31,21 +39,21 @@
    <item>
     <widget class="QLineEdit" name="filterLineEdit">
      <property name="placeholderText">
-      <string>Search computers</string>
+      <string>Cari Komputer</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="addLocationButton">
      <property name="text">
-      <string>Add location</string>
+      <string>Tambahkan</string>
      </property>
     </widget>
    </item>
    <item>
     <widget class="QPushButton" name="saveListButton">
      <property name="text">
-      <string>Save computer/user list</string>
+      <string>Simpan Komputer</string>
      </property>
     </widget>
    </item>

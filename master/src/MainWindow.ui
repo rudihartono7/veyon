@@ -36,6 +36,9 @@
     </property>
     <item>
      <widget class="ComputerMonitoringWidget" name="computerMonitoringWidget">
+      <property name="styleSheet">
+       <string notr="true">background: #FAFAFA;</string>
+      </property>
       <widget class="QToolButton" name="autoAdjustComputerIconSizeButton">
        <property name="geometry">
         <rect>
@@ -140,7 +143,7 @@
         </rect>
        </property>
        <property name="placeholderText">
-        <string>Search users and computers</string>
+        <string>Cari pengguna dan komputer</string>
        </property>
       </widget>
       <widget class="QLabel" name="spacerLabel2">
@@ -257,7 +260,7 @@
         <item>
          <widget class="QToolButton" name="computerSelectPanelButton">
           <property name="text">
-           <string>Locations &amp;&amp; computers</string>
+           <string>Daftar Komputer</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/master.qrc">
@@ -277,7 +280,7 @@
         <item>
          <widget class="QToolButton" name="screenshotManagementPanelButton">
           <property name="text">
-           <string>Screenshots</string>
+           <string>Daftar Screenshot</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/master.qrc">

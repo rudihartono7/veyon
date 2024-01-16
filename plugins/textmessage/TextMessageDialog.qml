@@ -4,7 +4,7 @@ import QtQuick.Dialogs 1.0
 import QtQuick.Layouts 1.0
 
 Dialog {
-	title: qsTr("Send text message")
+    title: qsTr("Kirim Memo")
 	x: (parent.width - width) / 2
 	y: (parent.height - height) / 2
 	standardButtons: Dialog.Ok | Dialog.Cancel
@@ -20,7 +20,7 @@ Dialog {
 	ColumnLayout {
 		anchors.fill: parent
 		Label {
-			text: qsTr("Please enter your message which send to all selected users.")
+            text: qsTr("Silahkan klik tombol OK untuk mengirimkan pesan ke semua komputer.")
 			wrapMode: Label.WordWrap
 			Layout.fillWidth: true
 		}

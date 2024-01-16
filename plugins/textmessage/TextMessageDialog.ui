@@ -3,6 +3,14 @@
  <author>Tobias Junghans</author>
  <class>TextMessageDialog</class>
  <widget class="QDialog" name="TextMessageDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>274</width>
+    <height>278</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>Send text message</string>
   </property>
@@ -10,11 +18,14 @@
    <iconset resource="textmessage.qrc">
     <normaloff>:/textmessage/dialog-information.png</normaloff>:/textmessage/dialog-information.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background: #FAFAFA;</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>Please enter your message which send to all selected users.</string>
+      <string>Kirim Memo</string>
      </property>
      <property name="wordWrap">
       <bool>true</bool>
@@ -22,12 +33,36 @@
     </widget>
    </item>
    <item>
-    <widget class="QTextEdit" name="textEdit"/>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid gray;
+border-radius: 0px;
+padding: 0 8px;
+background: white;
+selection-background-color: #EAEAEA;
+</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">color: white;
+background-color: rgb(52, 155, 243);
+border-style: outset;
+border-width: 2px;
+border-radius: 0px;
+border-color: beige;
+font: reguler 14px;
+min-width: 10em;
+padding: 6px;
+</string>
+     </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
      </property>
     </widget>
    </item>

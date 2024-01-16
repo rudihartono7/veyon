@@ -44,7 +44,7 @@ TextMessageDialog::TextMessageDialog( QString &msgStr, QWidget *parent ) :
 
 TextMessageDialog::~TextMessageDialog()
 {
-	delete ui;
+    delete ui;
 }
 
 

@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>SlideshowPanel</class>
  <widget class="QWidget" name="SlideshowPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>292</width>
+    <height>231</height>
+   </rect>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
     <number>0</number>
@@ -92,7 +100,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Duration:</string>
+         <string>Durasi:</string>
         </property>
        </widget>
       </item>

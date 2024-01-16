@@ -2,12 +2,23 @@
 <ui version="4.0">
  <class>UserLoginDialog</class>
  <widget class="QDialog" name="UserLoginDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>439</width>
+    <height>122</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>User login</string>
   </property>
   <property name="windowIcon">
    <iconset resource="usersessioncontrol.qrc">
     <normaloff>:/usersessioncontrol/login-user.png</normaloff>:/usersessioncontrol/login-user.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #FFF;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

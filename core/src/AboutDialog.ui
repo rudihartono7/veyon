@@ -15,7 +15,7 @@
    <string>About Veyon</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../resources/core.qrc">
+   <iconset>
     <normaloff>:/core/help-about.png</normaloff>:/core/help-about.png</iconset>
   </property>
   <property name="modal">
@@ -66,7 +66,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="../resources/core.qrc">:/core/icon64.png</pixmap>
+        <pixmap>:/core/icon64.png</pixmap>
        </property>
       </widget>
      </item>
@@ -75,7 +75,6 @@
        <property name="font">
         <font>
          <pointsize>14</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -89,11 +88,11 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="icon">
-       <iconset resource="../resources/core.qrc">
+       <iconset>
         <normaloff>:/core/help-about.png</normaloff>:/core/help-about.png</iconset>
       </attribute>
       <attribute name="title">
@@ -184,7 +183,7 @@
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="icon">
-       <iconset resource="../resources/core.qrc">
+       <iconset>
         <normaloff>:/core/user-group-new.png</normaloff>:/core/user-group-new.png</iconset>
       </attribute>
       <attribute name="title">
@@ -220,7 +219,7 @@
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="icon">
-       <iconset resource="../resources/core.qrc">
+       <iconset>
         <normaloff>:/core/languages.png</normaloff>:/core/languages.png</iconset>
       </attribute>
       <attribute name="title">
@@ -261,7 +260,7 @@ If you're interested in translating Veyon into your local or another language or
      </widget>
      <widget class="QWidget" name="tab_4">
       <attribute name="icon">
-       <iconset resource="../resources/core.qrc">
+       <iconset>
         <normaloff>:/core/license.png</normaloff>:/core/license.png</iconset>
       </attribute>
       <attribute name="title">

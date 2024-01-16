@@ -40,9 +40,9 @@ TextMessageFeaturePlugin::TextMessageFeaturePlugin( QObject* parent ) :
 								   Feature::Flag::Action | Feature::Flag::AllComponents,
 								   Feature::Uid( "e75ae9c8-ac17-4d00-8f0d-019348346208" ),
 								   Feature::Uid(),
-								   tr( "Text message" ), {},
-								   tr( "Use this function to send a text message to all "
-									   "users e.g. to assign them new tasks." ),
+                                   tr( "Memo" ), {},
+                                   tr( "Gunakan fitur ini utnuk mengirimkan pesan/memo "
+                                       "Sebagai contoh saat ada penugasan ke pengguna" ),
 								   QStringLiteral(":/textmessage/dialog-information.png") ) ),
 	m_features( { m_textMessageFeature } )
 {
@@ -159,7 +159,7 @@ bool TextMessageFeaturePlugin::handleFeatureMessage( VeyonWorkerInterface& worke
 	if( message.featureUid() == m_textMessageFeature.uid() )
 	{
 		auto messageBox = new QMessageBox( static_cast<QMessageBox::Icon>( message.argument( Argument::Icon ).toInt() ),
-										   tr( "Message from teacher" ),
+                                           tr( "Pesan dari Pengajar" ),
 										   message.argument( Argument::Text ).toString() );
 		messageBox->setTextFormat( Qt::RichText );
 		messageBox->setTextInteractionFlags( Qt::TextBrowserInteraction | Qt::TextSelectableByKeyboard );
