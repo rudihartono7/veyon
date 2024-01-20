@@ -23,6 +23,8 @@
 
 #include <QGuiApplication>
 #include <QMenu>
+#include <QPainter>
+#include <QPaintEvent>
 
 #include "MainToolBar.h"
 #include "MainWindow.h"
@@ -36,6 +38,10 @@ MainToolBar::MainToolBar( QWidget* parent ) :
 	m_mainWindow( dynamic_cast<MainWindow *>( parent ) )
 {
 	setIconSize(QSize(48, 48) / qGuiApp->devicePixelRatio());
+
+    QPalette pal = palette();
+    pal.setBrush( QPalette::Window, QColor(52, 155, 243) );
+    setPalette( pal );
 
 	ToolButton::setToolTipsDisabled( m_mainWindow->masterCore().userConfig().noToolTips() );
 	ToolButton::setIconOnlyMode( m_mainWindow, m_mainWindow->masterCore().userConfig().toolButtonIconOnlyMode() );
