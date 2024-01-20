@@ -27,10 +27,17 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="ComputerMonitoringWidget" name="monitoringWidget"/>
+    <widget class="ComputerMonitoringWidget" name="monitoringWidget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: #FAFAFA;</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: #FAFAFA;</string>
+     </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <property name="leftMargin">
        <number>4</number>
@@ -141,7 +148,7 @@
  <customwidgets>
   <customwidget>
    <class>ComputerMonitoringWidget</class>
-   <extends>QListView</extends>
+   <extends>QWidget</extends>
    <header>ComputerMonitoringWidget.h</header>
    <container>1</container>
   </customwidget>

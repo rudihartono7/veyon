@@ -35,7 +35,7 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="ComputerMonitoringWidget" name="computerMonitoringWidget">
+     <widget class="ComputerMonitoringWidget" name="computerMonitoringWidget" native="true">
       <property name="styleSheet">
        <string notr="true">background: #FAFAFA;</string>
       </property>
@@ -50,6 +50,11 @@
        </property>
        <property name="toolTip">
         <string>Adjust size of computer icons automatically</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #828282;
+</string>
        </property>
        <property name="text">
         <string>Auto</string>
@@ -115,6 +120,11 @@
        <property name="toolTip">
         <string>About Veyon</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #828282;
+</string>
+       </property>
        <property name="text">
         <string>About</string>
        </property>
@@ -141,6 +151,10 @@
          <width>113</width>
          <height>38</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
        </property>
        <property name="placeholderText">
         <string>Cari pengguna dan komputer</string>
@@ -174,6 +188,11 @@
        <property name="toolTip">
         <string>Align computers to grid</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #828282;
+</string>
+       </property>
        <property name="icon">
         <iconset resource="../resources/master.qrc">
          <normaloff>:/master/align-grid.png</normaloff>:/master/align-grid.png</iconset>
@@ -190,6 +209,11 @@
        </property>
        <property name="toolTip">
         <string>Use custom computer arrangement</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #828282;
+</string>
        </property>
        <property name="icon">
         <iconset resource="../resources/master.qrc">
@@ -220,6 +244,11 @@
        </property>
        <property name="toolTip">
         <string>Only show powered on computers</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #828282;
+</string>
        </property>
        <property name="icon">
         <iconset resource="../resources/master.qrc">
@@ -264,7 +293,7 @@
           </property>
           <property name="icon">
            <iconset resource="../resources/master.qrc">
-            <normaloff>:/master/computers.png</normaloff>:/master/computers.png</iconset>
+            <normaloff>:/master/computer-list-icon.png</normaloff>:/master/computer-list-icon.png</iconset>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -284,7 +313,7 @@
           </property>
           <property name="icon">
            <iconset resource="../resources/master.qrc">
-            <normaloff>:/master/camera-photo.png</normaloff>:/master/camera-photo.png</iconset>
+            <normaloff>:/master/screenshot-list.png</normaloff>:/master/screenshot-list.png</iconset>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -345,12 +374,64 @@
        <property name="toolTip">
         <string>Only show computers with logged on users</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #828282;
+</string>
+       </property>
        <property name="icon">
         <iconset resource="../../core/resources/core.qrc">
          <normaloff>:/core/user-group-new.png</normaloff>:/core/user-group-new.png</iconset>
        </property>
        <property name="checkable">
         <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="annotationBtn">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>570</y>
+         <width>74</width>
+         <height>37</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #828282;
+</string>
+       </property>
+       <property name="text">
+        <string>Anotasi</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources/master.qrc">
+         <normaloff>:/master/annotation-icon.png</normaloff>:/master/annotation-icon.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="spacerLabel5">
+       <property name="geometry">
+        <rect>
+         <x>1110</x>
+         <y>350</y>
+         <width>31</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
@@ -372,20 +453,21 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>ComputerMonitoringWidget</class>
-   <extends>QListView</extends>
-   <header>ComputerMonitoringWidget.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>MainToolBar</class>
    <extends>QToolBar</extends>
    <header>MainToolBar.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ComputerMonitoringWidget</class>
+   <extends>QWidget</extends>
+   <header>ComputerMonitoringWidget.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>
   <include location="../../core/resources/core.qrc"/>
   <include location="../resources/master.qrc"/>
+  <include location="../../../classroom-management/master/resources/master.qrc"/>
  </resources>
  <connections>
   <connection>

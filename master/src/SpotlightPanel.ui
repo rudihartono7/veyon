@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>SpotlightPanel</class>
  <widget class="QWidget" name="SpotlightPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>592</width>
+    <height>183</height>
+   </rect>
+  </property>
   <layout class="QVBoxLayout" name="_2">
    <property name="spacing">
     <number>0</number>
@@ -113,7 +121,11 @@ The second button removes the selected or last computer.</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="ComputerMonitoringWidget" name="monitoringWidget"/>
+        <widget class="ComputerMonitoringWidget" name="monitoringWidget" native="true">
+         <property name="styleSheet">
+          <string notr="true">background-color: #FAFAFA;</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -121,6 +133,9 @@ The second button removes the selected or last computer.</string>
    </item>
    <item>
     <widget class="QWidget" name="widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: #FAFAFA;</string>
+     </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <property name="leftMargin">
        <number>4</number>
@@ -199,7 +214,7 @@ The second button removes the selected or last computer.</string>
  <customwidgets>
   <customwidget>
    <class>ComputerMonitoringWidget</class>
-   <extends>QListView</extends>
+   <extends>QWidget</extends>
    <header>ComputerMonitoringWidget.h</header>
    <container>1</container>
   </customwidget>

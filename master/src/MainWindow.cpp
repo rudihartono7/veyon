@@ -28,6 +28,8 @@
 #include <QMenu>
 #include <QMessageBox>
 #include <QSplitter>
+#include <QDesktopServices>
+#include <QUrl>
 
 #include "AboutDialog.h"
 #include "AccessControlProvider.h"
@@ -68,6 +70,8 @@ MainWindow::MainWindow( VeyonMaster &masterCore, QWidget* parent ) :
 	// add widgets to status bar
 	ui->statusBar->addWidget( ui->panelButtons );
 	ui->statusBar->addWidget( ui->spacerLabel1 );
+    ui->statusBar->addWidget( ui->annotationBtn );
+    ui->statusBar->addWidget( ui->spacerLabel5 );
 	ui->statusBar->addWidget( ui->filterLineEdit, 2 );
 	ui->statusBar->addWidget( ui->filterPoweredOnComputersButton );
 	ui->statusBar->addWidget( ui->filterComputersWithLoggedOnUsersButton );
@@ -119,7 +123,7 @@ MainWindow::MainWindow( VeyonMaster &masterCore, QWidget* parent ) :
 		{ computerSelectPanel, ui->computerSelectPanelButton },
 		{ screenshotManagementPanel, ui->screenshotManagementPanelButton },
 		{ slideshowPanel, ui->slideshowPanelButton },
-		{ spotlightPanel, ui->spotlightPanelButton }
+        { spotlightPanel, ui->spotlightPanelButton }
 	};
 
 	for( auto it = panelButtons.constBegin(), end = panelButtons.constEnd(); it != end; ++it )
@@ -221,6 +225,7 @@ MainWindow::MainWindow( VeyonMaster &masterCore, QWidget* parent ) :
 				 ui->computerMonitoringWidget->setAutoAdjustIconSize( enabled );
 				 m_master.userConfig().setAutoAdjustMonitoringIconSize( enabled );
 			 } );
+    connect( ui->annotationBtn, &ToolButton::clicked, this, &MainWindow::showAnnotation );
 
 	// initialize computer placement controls
 	ui->useCustomComputerArrangementButton->setChecked( m_master.userConfig().useCustomComputerPositions() );
@@ -332,7 +337,10 @@ ComputerControlInterfaceList MainWindow::selectedComputerControlInterfaces() con
 	return ui->computerMonitoringWidget->selectedComputerControlInterfaces();
 }
 
-
+void MainWindow::showAnnotation() {
+    QString filePath = tr("file:///C:/Program Files (x86)/smartclassroom-gInk/gInk.exe");
+    QDesktopServices::openUrl(QUrl(filePath, QUrl::TolerantMode));
+}
 
 void MainWindow::closeEvent( QCloseEvent* event )
 {
