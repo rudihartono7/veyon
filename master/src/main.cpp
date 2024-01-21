@@ -26,6 +26,11 @@
 #include <QGuiApplication>
 #include <QSplashScreen>
 
+#include <QLocalSocket>
+#include <QLocalServer>
+#include <QString>
+#include <stdio.h>
+
 #include "DocumentationFigureCreator.h"
 #include "MainWindow.h"
 #include "VeyonConfiguration.h"
@@ -42,6 +47,29 @@ int main( int argc, char** argv )
 
 	VeyonCore core( app, VeyonCore::Component::Master, QStringLiteral("Master") );
 
+    VeyonMaster masterCore( &core );
+
+    QString appKey = QStringLiteral("classroom-management-01");
+
+    QLocalSocket* socket = new QLocalSocket();
+    socket->connectToServer(appKey);
+
+    if (socket->isOpen()) {
+        socket->close();
+        socket->deleteLater();
+
+        app.setActiveWindow(masterCore.mainWindow());
+        masterCore.mainWindow()->activateWindow();
+        masterCore.mainWindow()->show();
+        masterCore.mainWindow()->raise();
+        masterCore.mainWindow()->setFocus();
+
+        return 0;
+    }
+
+    socket->deleteLater();
+
+    QLocalServer server;
 #ifdef VEYON_DEBUG
 	if( qEnvironmentVariableIsSet( "VEYON_MASTER_CREATE_DOC_FIGURES") )
 	{
@@ -64,13 +92,22 @@ int main( int argc, char** argv )
 		return -1;
 	}
 
-	VeyonMaster masterCore( &core );
+    server.listen(appKey);
 
+    app.setActiveWindow(masterCore.mainWindow());
+    masterCore.mainWindow()->activateWindow();
+
+    masterCore.mainWindow()->show();
+    masterCore.mainWindow()->raise();
+    masterCore.mainWindow()->setFocus();
+
+    /*
 	if( masterCore.mainWindow() )
 	{
 		splashScreen->finish( masterCore.mainWindow() );
 		masterCore.mainWindow()->show();
 	}
+    */
 
 	return core.exec();
 }

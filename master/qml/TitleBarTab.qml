@@ -21,7 +21,7 @@ Item {
 	}
 
 	Rectangle {
-		color: "white"
+        color: "#D0D0D0"
 		visible: active
 		anchors.fill: parent
 	}
@@ -35,7 +35,7 @@ Item {
 			Layout.margins: 8
 			font.bold: true
 			font.capitalization: Font.AllUppercase
-			color: active ? "#444" : "white"
+            color: active ? "#444" : "#D0D0D0"
 		}
 		Item {
 			width: height

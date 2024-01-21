@@ -62,7 +62,8 @@ MainWindow::MainWindow( VeyonMaster &masterCore, QWidget* parent ) :
 {
 	ui->setupUi( this );
 
-	setWindowTitle( QStringLiteral( "%1 Master" ).arg( VeyonCore::applicationName() ) );
+    //setWindowTitle( QStringLiteral( "%1 Master" ).arg( VeyonCore::applicationName() ) );
+    setWindowTitle( QStringLiteral( "Classroom Management" ) );
 
 	restoreState( QByteArray::fromBase64( m_master.userConfig().windowState().toUtf8() ) );
 	restoreGeometry( QByteArray::fromBase64( m_master.userConfig().windowGeometry().toUtf8() ) );

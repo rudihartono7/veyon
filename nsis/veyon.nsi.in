@@ -1,5 +1,5 @@
-!define APP_NAME "Veyon"
-!define COMP_NAME "Veyon Solutions"
+!define APP_NAME "Classroom Management"
+!define COMP_NAME "Pinteraktif"
 !define WEB_SITE "https://veyon.io"
 !define VERSION "@VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_PATCH@.@VERSION_BUILD@"
 !define COPYRIGHT "2004-2023 Veyon Solutions / Tobias Junghans"
