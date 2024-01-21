@@ -58,7 +58,7 @@ int main( int argc, char** argv )
         socket->close();
         socket->deleteLater();
 
-        app.setActiveWindow(masterCore.mainWindow());
+        //app.setActiveWindow(masterCore.mainWindow());
         masterCore.mainWindow()->activateWindow();
         masterCore.mainWindow()->show();
         masterCore.mainWindow()->raise();
@@ -94,7 +94,7 @@ int main( int argc, char** argv )
 
     server.listen(appKey);
 
-    app.setActiveWindow(masterCore.mainWindow());
+    //app.setActiveWindow(masterCore.mainWindow());
     masterCore.mainWindow()->activateWindow();
 
     masterCore.mainWindow()->show();
