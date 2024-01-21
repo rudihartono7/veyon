@@ -64,7 +64,14 @@ void MainToolBar::contextMenuEvent( QContextMenuEvent* event )
 	menu.exec( event->globalPos() );
 }
 
-
+void MainToolBar::paintEvent( QPaintEvent* event )
+{
+    QPainter p( this );
+    p.setPen( QColor(52, 155, 243) );
+    p.fillRect( event->rect(), palette().brush( QPalette::Window ) );
+    p.drawLine( 0, 0, width(), 0 );
+    p.drawLine( 0, height()-1, width(), height()-1 );
+}
 
 void MainToolBar::toggleToolTips()
 {

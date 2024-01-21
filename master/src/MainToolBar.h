@@ -40,6 +40,7 @@ private:
 	void toggleIconMode();
 
 	void contextMenuEvent( QContextMenuEvent* event ) override;
+    void paintEvent( QPaintEvent* event ) override;
 
 	MainWindow* m_mainWindow;
 
