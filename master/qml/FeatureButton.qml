@@ -14,7 +14,7 @@ Button {
 	width: height*1.3
 
 	background: Rectangle {
-		color: control.down ? "#ddd" : control.hovered ? "#eee" : "transparent"
+        color: control.down ? "#ddd" : control.hovered ? "#D0D0D0" : "transparent"
 		width: parent.width
 	}
 

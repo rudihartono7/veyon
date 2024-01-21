@@ -20,7 +20,7 @@ ApplicationWindow {
 	Material.accent: Material.Cyan
 	Material.primary: Material.Cyan
 
-	title: qsTr("Veyon Master")
+    title: qsTr("Classroom Management")
 
 	Component.onCompleted: {
 		masterCore.appWindow = this
