@@ -69,7 +69,7 @@ MainWindow::MainWindow( VeyonMaster &masterCore, QWidget* parent ) :
 
 	// add widgets to status bar
 	ui->statusBar->addWidget( ui->panelButtons );
-	ui->statusBar->addWidget( ui->spacerLabel1 );
+    //ui->statusBar->addWidget( ui->spacerLabel1 );
     ui->statusBar->addWidget( ui->annotationBtn );
     ui->statusBar->addWidget( ui->spacerLabel5 );
 	ui->statusBar->addWidget( ui->filterLineEdit, 2 );
