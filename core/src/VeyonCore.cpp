@@ -224,9 +224,9 @@ QString VeyonCore::sessionIdEnvironmentVariable()
 
 void VeyonCore::setupApplicationParameters()
 {
-	QCoreApplication::setOrganizationName( QStringLiteral( "Veyon Solutions" ) );
-	QCoreApplication::setOrganizationDomain( QStringLiteral( "veyon.io" ) );
-	QCoreApplication::setApplicationName( QStringLiteral( "Veyon" ) );
+    QCoreApplication::setOrganizationName( QStringLiteral( "Pinteraktif" ) );
+    QCoreApplication::setOrganizationDomain( QStringLiteral( "pinteraktif.com" ) );
+    QCoreApplication::setApplicationName( QStringLiteral( "Classroom Management" ) );
 
 	QCoreApplication::setAttribute( Qt::AA_ShareOpenGLContexts );
 
@@ -246,7 +246,7 @@ QString VeyonCore::applicationName()
 
 void VeyonCore::enforceBranding( QWidget *topLevelWidget )
 {
-	const auto appName = QStringLiteral( "Veyon" );
+    const auto appName = QStringLiteral( "Classroom Management" );
 
 	auto labels = topLevelWidget->findChildren<QLabel *>();
 	for( auto label : labels )
