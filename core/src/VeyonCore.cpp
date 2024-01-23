@@ -628,7 +628,7 @@ void VeyonCore::initUi()
 
 		app->setStyleSheet(QStringLiteral(
                                "QToolButton:checked {background-color:#88ddff;}"
-                               "QToolButton:hover {background-color:#DAFAFA;}"
+                               "QToolButton:hover {background-color:#e8e8e8;}"
                                "QToolButton {color:#ffffff;}"
 							   "QToolTip {padding:5px; border:0px;}"
 							   ));

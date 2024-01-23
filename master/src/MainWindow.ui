@@ -288,6 +288,10 @@ border-color: #828282;
         </property>
         <item>
          <widget class="QToolButton" name="computerSelectPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;
+</string>
+          </property>
           <property name="text">
            <string>Daftar Komputer</string>
           </property>
@@ -308,6 +312,10 @@ border-color: #828282;
         </item>
         <item>
          <widget class="QToolButton" name="screenshotManagementPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;
+</string>
+          </property>
           <property name="text">
            <string>Daftar Screenshot</string>
           </property>
@@ -328,6 +336,10 @@ border-color: #828282;
         </item>
         <item>
          <widget class="QToolButton" name="slideshowPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;
+</string>
+          </property>
           <property name="text">
            <string>Slideshow</string>
           </property>
@@ -345,6 +357,10 @@ border-color: #828282;
         </item>
         <item>
          <widget class="QToolButton" name="spotlightPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;
+</string>
+          </property>
           <property name="text">
            <string>Spotlight</string>
           </property>
@@ -403,7 +419,8 @@ border-color: #828282;
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: #FAFAFA;
+        <string notr="true">color: black;
+background-color: #FAFAFA;
 border-color: #828282;
 </string>
        </property>
