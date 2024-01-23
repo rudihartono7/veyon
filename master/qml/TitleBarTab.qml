@@ -21,7 +21,7 @@ Item {
 	}
 
 	Rectangle {
-        color: "#D0D0D0"
+        color: "white"
 		visible: active
 		anchors.fill: parent
 	}
@@ -35,7 +35,7 @@ Item {
 			Layout.margins: 8
 			font.bold: true
 			font.capitalization: Font.AllUppercase
-            color: active ? "#444" : "#D0D0D0"
+            color: active ? "#444" : "white"
 		}
 		Item {
 			width: height
@@ -46,7 +46,7 @@ Item {
 				width: height
 				height: parent.height
 				opacity: closeButtonMouseArea.pressed ? 0.5 : closeButtonMouseArea.containsMouse ? 0.3 : 0
-                color: closeButtonMouseArea.pressed ? "#aaaaaa" : active ? label.color : "#D0D0D0"
+                color: closeButtonMouseArea.pressed ? "#aaaaaa" : active ? label.color : "white"
 			}
 			Label {
 				id: closeLabel

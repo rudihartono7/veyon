@@ -97,9 +97,12 @@ int main( int argc, char** argv )
     //app.setActiveWindow(masterCore.mainWindow());
     masterCore.mainWindow()->activateWindow();
 
-    masterCore.mainWindow()->show();
-    masterCore.mainWindow()->raise();
-    masterCore.mainWindow()->setFocus();
+    if( masterCore.mainWindow() ){
+        splashScreen->finish( masterCore.mainWindow() );
+        masterCore.mainWindow()->show();
+        masterCore.mainWindow()->raise();
+        masterCore.mainWindow()->setFocus();
+    }
 
     /*
 	if( masterCore.mainWindow() )
