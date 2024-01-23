@@ -24,7 +24,7 @@ Item {
         color: "white"
 		visible: active
 		anchors.fill: parent
-	}
+    }
 
 	RowLayout {
 		id: labelLayout

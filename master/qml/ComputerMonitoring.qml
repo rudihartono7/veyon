@@ -192,7 +192,7 @@ Page {
 					leftInset: 0
 					rightInset: 0
 					background: Rectangle {
-						color: parent.down ? "#ccc" : parent.hovered ? "#ddd" : "#ddd"
+                        color: parent.down ? "#ccc" : parent.hovered ? "#ddd" : "white"
 						border.color: "#888"
 						border.width: 1
 					}
