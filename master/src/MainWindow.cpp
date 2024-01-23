@@ -463,9 +463,7 @@ void MainWindow::addFeaturesToToolBar()
 			}
 		} );
 		btn->setObjectName( feature.name() );
-		btn->addTo( ui->toolBar );
-        btn->setStyleSheet(QStringLiteral( "QToolButton:checked {background-color:#88ddff;}"
-                                          "QToolButton:hover {background-color:#e8e8e8;}" ));
+        btn->addTo( ui->toolBar );
 
 		if( feature.testFlag( Feature::Flag::Mode ) )
 		{

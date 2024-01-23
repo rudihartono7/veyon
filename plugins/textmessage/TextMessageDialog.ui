@@ -19,7 +19,7 @@
     <normaloff>:/textmessage/dialog-information.png</normaloff>:/textmessage/dialog-information.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: #FAFAFA;</string>
+   <string notr="true">background: #;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
