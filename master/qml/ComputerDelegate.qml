@@ -50,7 +50,7 @@ Rectangle {
 			Layout.alignment: Qt.AlignCenter
 			clip: true
 			elide: Label.ElideRight
-            color: parent.GridView.isCurrentItem ? "green" : item.textColor
+            color: parent.GridView.isCurrentItem ? "white" : item.textColor
 
 		}
 
