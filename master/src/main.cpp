@@ -23,7 +23,9 @@
  */
 
 #include <QApplication>
+#include <QGuiApplication>
 #include <QSplashScreen>
+
 #include <QLocalSocket>
 #include <QLocalServer>
 #include <QString>
@@ -54,7 +56,6 @@ int main( int argc, char** argv )
         socket->close();
         socket->deleteLater();
 
-        //app.setActiveWindow(masterCore.mainWindow());
         masterCore.mainWindow()->activateWindow();
         masterCore.mainWindow()->show();
         masterCore.mainWindow()->raise();
@@ -85,7 +86,6 @@ int main( int argc, char** argv )
 
     server.listen(appKey);
 
-    //app.setActiveWindow(masterCore.mainWindow());
     masterCore.mainWindow()->activateWindow();
 
     if( masterCore.mainWindow() ){
@@ -94,13 +94,6 @@ int main( int argc, char** argv )
         masterCore.mainWindow()->raise();
         masterCore.mainWindow()->setFocus();
     }
-
-	// VeyonMaster masterCore( &core );
-
-	// // hide splash-screen as soon as main-window is shown
-	// splashScreen.finish( masterCore.mainWindow() );
-
-	// masterCore.mainWindow()->show();
 
 	return core.exec();
 }
