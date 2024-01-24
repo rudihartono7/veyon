@@ -64,6 +64,7 @@ int main( int argc, char** argv )
     }
 
 	 socket->deleteLater();
+	 QLocalServer server;
 
 #ifdef VEYON_DEBUG
 	if( qEnvironmentVariableIsSet( "VEYON_MASTER_CREATE_DOC_FIGURES") )
