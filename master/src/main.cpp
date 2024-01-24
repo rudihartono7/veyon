@@ -89,7 +89,7 @@ int main( int argc, char** argv )
     masterCore.mainWindow()->activateWindow();
 
     if( masterCore.mainWindow() ){
-        splashScreen->finish( masterCore.mainWindow() );
+        splashScreen.finish( masterCore.mainWindow() );
         masterCore.mainWindow()->show();
         masterCore.mainWindow()->raise();
         masterCore.mainWindow()->setFocus();
