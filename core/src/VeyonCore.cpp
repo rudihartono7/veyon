@@ -643,7 +643,6 @@ void VeyonCore::initUi()
 
 		auto toolTipPalette = QToolTip::palette();
 		static const char* toolTipBackgroundColor = "#198cb3";
-		static const char* toolTipTextColor = "#fff";
 		toolTipPalette.setColor(QPalette::Window, toolTipBackgroundColor);
 		toolTipPalette.setColor(QPalette::ToolTipBase, toolTipBackgroundColor);
 		toolTipPalette.setColor(QPalette::ToolTipText, Qt::white);
