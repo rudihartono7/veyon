@@ -253,7 +253,8 @@ void ComputerMonitoringWidget::addSubFeaturesToMenu( const Feature& parentFeatur
 		menu->addAction( QIcon( subFeature.iconUrl() ), subFeature.displayName(), m_featureMenu,
 						 [=]() { runFeature( subFeature ); }, subFeature.shortcut() );
         menu->setStyleSheet( QStringLiteral(
-            "item:hover {color:#a1a1a1;}"
+            "item:selected {color:#a1a1a1;}"
+            "item:selected {background-color:green;}"
             ) );
 	}
 }
