@@ -254,7 +254,7 @@ void ComputerMonitoringWidget::addSubFeaturesToMenu( const Feature& parentFeatur
 						 [=]() { runFeature( subFeature ); }, subFeature.shortcut() );
         menu->setStyleSheet( QStringLiteral(
             "item:selected {color:#a1a1a1;}"
-            "item:selected {background-color:green;}"
+            "item:selected {background-color:#349BF3;}"
             ) );
 	}
 }
