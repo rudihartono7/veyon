@@ -2,9 +2,34 @@
 <ui version="4.0">
  <class>ComputerSelectPanel</class>
  <widget class="QWidget" name="ComputerSelectPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>204</width>
+    <height>205</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget { 
+	background-color: white;
+    border-style: outset;
+    border-right-width: 4px;
+    border-bottom-width: 1px;
+    border-radius: 0px;
+    border-color: #349BF3;
+	color: black;
+    padding: 6px;
+}</string>
+  </property>
   <layout class="QVBoxLayout">
    <item>
     <widget class="QTreeView" name="treeView">
+     <property name="styleSheet">
+      <string notr="true">border-width: 2px;
+color: black;
+border-color: #EAEAEA;</string>
+     </property>
      <property name="sizeAdjustPolicy">
       <enum>QAbstractScrollArea::AdjustToContents</enum>
      </property>
@@ -30,6 +55,10 @@
    </item>
    <item>
     <widget class="QLineEdit" name="filterLineEdit">
+     <property name="styleSheet">
+      <string notr="true">border-width: 1px;
+border-color: #rgb(144, 144, 144);</string>
+     </property>
      <property name="placeholderText">
       <string>Search computers</string>
      </property>
@@ -37,6 +66,15 @@
    </item>
    <item>
     <widget class="QPushButton" name="addLocationButton">
+     <property name="styleSheet">
+      <string notr="true">	color: white;
+	background-color: #349BF3;
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 0px;
+    font: reguler 14px;
+    padding: 6px;</string>
+     </property>
      <property name="text">
       <string>Add location</string>
      </property>
@@ -44,6 +82,15 @@
    </item>
    <item>
     <widget class="QPushButton" name="saveListButton">
+     <property name="styleSheet">
+      <string notr="true">	color: white;
+	background-color: #349BF3;
+    border-style: outset;
+    border-width: 0px;
+    border-radius: 0px;
+    font: reguler 14px;
+    padding: 6px;</string>
+     </property>
      <property name="text">
       <string>Save computer/user list</string>
      </property>

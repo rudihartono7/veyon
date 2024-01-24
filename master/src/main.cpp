@@ -24,6 +24,10 @@
 
 #include <QApplication>
 #include <QSplashScreen>
+#include <QLocalSocket>
+#include <QLocalServer>
+#include <QString>
+#include <stdio.h>
 
 #include "DocumentationFigureCreator.h"
 #include "VeyonMaster.h"
@@ -39,6 +43,28 @@ int main( int argc, char** argv )
 
 	VeyonCore core( &app, VeyonCore::Component::Master, QStringLiteral("Master") );
 
+	QString appKey = QStringLiteral("classroom-management-01");
+
+	VeyonMaster masterCore( &core );
+
+	QLocalSocket* socket = new QLocalSocket();
+    socket->connectToServer(appKey);
+
+    if (socket->isOpen()) {
+        socket->close();
+        socket->deleteLater();
+
+        //app.setActiveWindow(masterCore.mainWindow());
+        masterCore.mainWindow()->activateWindow();
+        masterCore.mainWindow()->show();
+        masterCore.mainWindow()->raise();
+        masterCore.mainWindow()->setFocus();
+
+        return 0;
+    }
+
+	 socket->deleteLater();
+
 #ifdef VEYON_DEBUG
 	if( qEnvironmentVariableIsSet( "VEYON_MASTER_CREATE_DOC_FIGURES") )
 	{
@@ -51,17 +77,29 @@ int main( int argc, char** argv )
 	splashScreen.show();
 
 	if( MainWindow::initAuthentication() == false ||
-			MainWindow::initAccessControl() == false )
+		MainWindow::initAccessControl() == false )
 	{
 		return -1;
 	}
 
-	VeyonMaster masterCore( &core );
+    server.listen(appKey);
 
-	// hide splash-screen as soon as main-window is shown
-	splashScreen.finish( masterCore.mainWindow() );
+    //app.setActiveWindow(masterCore.mainWindow());
+    masterCore.mainWindow()->activateWindow();
 
-	masterCore.mainWindow()->show();
+    if( masterCore.mainWindow() ){
+        splashScreen->finish( masterCore.mainWindow() );
+        masterCore.mainWindow()->show();
+        masterCore.mainWindow()->raise();
+        masterCore.mainWindow()->setFocus();
+    }
+
+	// VeyonMaster masterCore( &core );
+
+	// // hide splash-screen as soon as main-window is shown
+	// splashScreen.finish( masterCore.mainWindow() );
+
+	// masterCore.mainWindow()->show();
 
 	return core.exec();
 }

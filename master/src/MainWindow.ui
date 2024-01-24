@@ -36,6 +36,9 @@
     </property>
     <item>
      <widget class="ComputerMonitoringWidget" name="computerMonitoringWidget">
+      <property name="styleSheet">
+       <string notr="true">background: #FAFAFA;</string>
+      </property>
       <widget class="QToolButton" name="autoAdjustComputerIconSizeButton">
        <property name="geometry">
         <rect>
@@ -47,6 +50,10 @@
        </property>
        <property name="toolTip">
         <string>Adjust size of computer icons automatically</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
        </property>
        <property name="text">
         <string>Auto</string>
@@ -112,6 +119,10 @@
        <property name="toolTip">
         <string>About Veyon</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
+       </property>
        <property name="text">
         <string>About</string>
        </property>
@@ -138,6 +149,10 @@
          <width>113</width>
          <height>38</height>
         </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
        </property>
        <property name="placeholderText">
         <string>Search users and computers</string>
@@ -171,6 +186,10 @@
        <property name="toolTip">
         <string>Align computers to grid</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
+       </property>
        <property name="icon">
         <iconset resource="../resources/master.qrc">
          <normaloff>:/master/align-grid.png</normaloff>:/master/align-grid.png</iconset>
@@ -187,6 +206,10 @@
        </property>
        <property name="toolTip">
         <string>Use custom computer arrangement</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
        </property>
        <property name="icon">
         <iconset resource="../resources/master.qrc">
@@ -217,6 +240,10 @@
        </property>
        <property name="toolTip">
         <string>Only show powered on computers</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
        </property>
        <property name="icon">
         <iconset resource="../resources/master.qrc">
@@ -256,12 +283,15 @@
         </property>
         <item>
          <widget class="QToolButton" name="computerSelectPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;</string>
+          </property>
           <property name="text">
            <string>Locations &amp;&amp; computers</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/master.qrc">
-            <normaloff>:/master/computers.png</normaloff>:/master/computers.png</iconset>
+            <normaloff>:/master/computer-list-icon.png</normaloff>:/master/computer-list-icon.png</iconset>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -276,12 +306,15 @@
         </item>
         <item>
          <widget class="QToolButton" name="screenshotManagementPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;</string>
+          </property>
           <property name="text">
            <string>Screenshots</string>
           </property>
           <property name="icon">
            <iconset resource="../resources/master.qrc">
-            <normaloff>:/master/camera-photo.png</normaloff>:/master/camera-photo.png</iconset>
+            <normaloff>:/master/screenshot-list.png</normaloff>:/master/screenshot-list.png</iconset>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -296,6 +329,9 @@
         </item>
         <item>
          <widget class="QToolButton" name="slideshowPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;</string>
+          </property>
           <property name="text">
            <string>Slideshow</string>
           </property>
@@ -313,6 +349,9 @@
         </item>
         <item>
          <widget class="QToolButton" name="spotlightPanelButton">
+          <property name="styleSheet">
+           <string notr="true">color: black;</string>
+          </property>
           <property name="text">
            <string>Spotlight</string>
           </property>
@@ -342,12 +381,51 @@
        <property name="toolTip">
         <string>Only show computers with logged on users</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FAFAFA;
+border-color: #rgb(144, 144, 144);</string>
+       </property>
        <property name="icon">
         <iconset resource="../../core/resources/core.qrc">
          <normaloff>:/core/user-group-new.png</normaloff>:/core/user-group-new.png</iconset>
        </property>
        <property name="checkable">
         <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="annotationBtn">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>570</y>
+         <width>74</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Segoe UI</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: black;
+background-color: #FAFAFA;
+border-color: #828282;
+</string>
+       </property>
+       <property name="text">
+        <string>Anotasi</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources/master.qrc">
+         <normaloff>:/master/annotation-icon.png</normaloff>:/master/annotation-icon.png</iconset>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextBesideIcon</enum>
        </property>
       </widget>
      </widget>
@@ -383,6 +461,7 @@
  <resources>
   <include location="../../core/resources/core.qrc"/>
   <include location="../resources/master.qrc"/>
+  <include location="../../../veyon-redesign/master/resources/master.qrc"/>
  </resources>
  <connections>
   <connection>

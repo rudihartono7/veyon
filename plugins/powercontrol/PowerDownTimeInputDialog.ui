@@ -3,12 +3,23 @@
  <author>Tobias Junghans</author>
  <class>PowerDownTimeInputDialog</class>
  <widget class="QDialog" name="PowerDownTimeInputDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>294</width>
+    <height>110</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>Power down</string>
   </property>
   <property name="windowIcon">
    <iconset resource="powercontrol.qrc">
     <normaloff>:/powercontrol/system-shutdown.png</normaloff>:/powercontrol/system-shutdown.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FAFAFA;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

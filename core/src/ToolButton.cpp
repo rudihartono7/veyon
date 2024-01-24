@@ -49,6 +49,8 @@ ToolButton::ToolButton( const QIcon& icon,
 	setText(label);
 	setAutoRaise(true);
 	setToolButtonStyle(Qt::ToolButtonStyle::ToolButtonTextUnderIcon);
+	setStyleSheet(QStringLiteral( "QToolButton:checked {background-color:#88ddff;}"
+                                  "QToolButton:hover {background-color:#e8e8e8;}" ));
 }
 
 

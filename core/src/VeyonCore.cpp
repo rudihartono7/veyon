@@ -209,9 +209,9 @@ QString VeyonCore::sessionIdEnvironmentVariable()
 
 void VeyonCore::setupApplicationParameters()
 {
-	QCoreApplication::setOrganizationName( QStringLiteral( "Veyon Solutions" ) );
-	QCoreApplication::setOrganizationDomain( QStringLiteral( "veyon.io" ) );
-	QCoreApplication::setApplicationName( QStringLiteral( "Veyon" ) );
+	QCoreApplication::setOrganizationName( QStringLiteral( "Pinteraktif" ) );
+	QCoreApplication::setOrganizationDomain( QStringLiteral( "pinteraktif.com" ) );
+	QCoreApplication::setApplicationName( QStringLiteral( "Classroom Management" ) );
 
 	QCoreApplication::setAttribute( Qt::AA_ShareOpenGLContexts );
 
@@ -244,7 +244,7 @@ QString VeyonCore::applicationName()
 
 void VeyonCore::enforceBranding( QWidget *topLevelWidget )
 {
-	const auto appName = QStringLiteral( "Veyon" );
+	const auto appName = QStringLiteral( "Classroom Management" );
 
 	const auto labels = topLevelWidget->findChildren<QLabel *>();
 	for( auto label : labels )
@@ -629,16 +629,21 @@ void VeyonCore::initUi()
 	{
 		if (m_config->uiStyle() == UiStyle::Fusion)
 		{
-			app->setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
+			app->setStyle(QStyleFactory::create(QStringLiteral("Native")));
 		}
 
 		app->setStyleSheet(QStringLiteral(
 							   "QToolButton:checked {background-color:#88ddff;}"
+                               "QToolButton:hover {background-color:#e8e8e8;}"
+                               "QMenu::item:selected {color:#000;}"
+                               "QMenu::item:selected {background-color:#349BF3;}"
+                               "QToolButton {color:#ffffff;}"
 							   "QToolTip {padding:5px; border:0px;}"
 							   ));
 
 		auto toolTipPalette = QToolTip::palette();
 		static const char* toolTipBackgroundColor = "#198cb3";
+		static const char* toolTipTextColor = "#fff";
 		toolTipPalette.setColor(QPalette::Window, toolTipBackgroundColor);
 		toolTipPalette.setColor(QPalette::ToolTipBase, toolTipBackgroundColor);
 		toolTipPalette.setColor(QPalette::ToolTipText, Qt::white);

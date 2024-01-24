@@ -24,6 +24,8 @@
 #include <QGuiApplication>
 #include <QContextMenuEvent>
 #include <QMenu>
+#include <QPainter>
+#include <QPaintEvent>
 
 #include "MainToolBar.h"
 #include "MainWindow.h"
@@ -37,6 +39,11 @@ MainToolBar::MainToolBar( QWidget* parent ) :
 	m_mainWindow( dynamic_cast<MainWindow *>( parent ) )
 {
 	setIconSize(QSize(48, 48) / qGuiApp->devicePixelRatio());
+
+	QPalette pal = palette();
+    pal.setBrush( QPalette::Window, QColor(52, 155, 243) );
+    setPalette( pal );
+
 
 	ToolButton::setToolTipsDisabled( m_mainWindow->masterCore().userConfig().noToolTips() );
 	ToolButton::setIconOnlyMode( m_mainWindow, m_mainWindow->masterCore().userConfig().toolButtonIconOnlyMode() );
@@ -59,7 +66,14 @@ void MainToolBar::contextMenuEvent( QContextMenuEvent* event )
 	menu.exec( event->globalPos() );
 }
 
-
+void MainToolBar::paintEvent( QPaintEvent* event )
+{
+    QPainter p( this );
+    p.setPen( QColor(52, 155, 243) );
+    p.fillRect( event->rect(), palette().brush( QPalette::Window ) );
+    p.drawLine( 0, 0, width(), 0 );
+    p.drawLine( 0, height()-1, width(), height()-1 );
+}
 
 void MainToolBar::toggleToolTips()
 {

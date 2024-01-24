@@ -28,6 +28,8 @@
 #include <QMenu>
 #include <QMessageBox>
 #include <QSplitter>
+#include <QDesktopServices>
+#include <QUrl>
 
 #include "AboutDialog.h"
 #include "AccessControlProvider.h"
@@ -67,6 +69,7 @@ MainWindow::MainWindow( VeyonMaster &masterCore, QWidget* parent ) :
 
 	// add widgets to status bar
 	ui->statusBar->addWidget( ui->panelButtons );
+	ui->statusBar->addWidget( ui->annotationBtn );
 	ui->statusBar->addWidget( ui->spacerLabel1 );
 	ui->statusBar->addWidget( ui->filterLineEdit, 2 );
 	ui->statusBar->addWidget( ui->filterPoweredOnComputersButton );
@@ -236,6 +239,7 @@ MainWindow::MainWindow( VeyonMaster &masterCore, QWidget* parent ) :
 			 ui->computerMonitoringWidget, &ComputerMonitoringWidget::setUseCustomComputerPositions );
 	connect( ui->alignComputersButton, &QToolButton::clicked,
 			 ui->computerMonitoringWidget, &ComputerMonitoringWidget::alignComputers );
+	connect( ui->annotationBtn, &ToolButton::clicked, this, &MainWindow::showAnnotation );
 
 
 	const auto toolButtons = findChildren<QToolButton*>();
@@ -291,6 +295,10 @@ bool MainWindow::initAuthentication()
 	return false;
 }
 
+void MainWindow::showAnnotation() {
+    QString filePath = tr("file:///C:/Program Files (x86)/smartclassroom-gInk/gInk.exe");
+    QDesktopServices::openUrl(QUrl(filePath, QUrl::TolerantMode));
+}
 
 
 bool MainWindow::initAccessControl()
