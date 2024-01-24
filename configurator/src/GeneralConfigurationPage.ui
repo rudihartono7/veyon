@@ -43,7 +43,7 @@
       <item row="0" column="0" colspan="2">
        <widget class="QLineEdit" name="applicationName">
         <property name="text">
-         <string>Veyon</string>
+         <string>Classroom Management</string>
         </property>
        </widget>
       </item>
@@ -58,12 +58,7 @@
        <widget class="QComboBox" name="uiStyle">
         <item>
          <property name="text">
-          <string notr="true">Fusion</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Native</string>
+          <string notr="true">Native</string>
          </property>
         </item>
        </widget>

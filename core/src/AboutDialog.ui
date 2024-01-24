@@ -18,6 +18,9 @@
    <iconset resource="../resources/core.qrc">
     <normaloff>:/core/help-about.png</normaloff>:/core/help-about.png</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FAFAFA;</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -75,12 +78,11 @@
        <property name="font">
         <font>
          <pointsize>14</pointsize>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>About Veyon</string>
+        <string>About Classroom Management</string>
        </property>
       </widget>
      </item>
