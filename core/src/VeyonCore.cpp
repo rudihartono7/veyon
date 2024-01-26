@@ -638,6 +638,7 @@ void VeyonCore::initUi()
                                "QMenu::item:selected {color:#000;}"
                                "QMenu::item:selected {background-color:#349BF3;}"
                                "QToolButton {color:#ffffff;}"
+                                "QToolButton {margin:0px;}"
 							   "QToolTip {padding:5px; border:0px;}"
 							   ));
 
